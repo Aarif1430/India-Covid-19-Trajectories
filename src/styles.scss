@@ -1,0 +1,72 @@
+/* You can add global styles to this file, and also import other style files */
+
+.main-panel {
+    overflow: hidden !important;
+}
+
+#header-links {
+    margin-bottom: 25px !important;
+    z-index: 25 !important;
+    color: white !important;
+}
+
+.buttonswrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+button {
+    padding: 0.3rem;
+    // margin: 10px;
+    font-size: 0.875rem !important;
+    text-align: left;
+    width: 100px;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    background-color: #4d0000;
+    color: lightgoldenrodyellow;
+    border: 0.125rem solid rgba(254, 52, 110, 1);
+    border-radius: 0.35rem !important;
+}
+
+.search {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.siderbar-panel {
+    text-align: center;
+}
+
+.sidebar {
+    // margin-left: 5px !important;
+    margin: auto !important;
+    height: 100% !important;
+}
+
+.states {
+    height: 250px;
+    overflow-y: scroll;
+    text-align: justify;
+}
+
+label {
+    display: block;
+    // padding-left: 15px;
+    text-indent: -15px;
+    margin-bottom: 0.9rem;
+    font-size: 14px !important;
+    color: black !important;
+}
+
+#selectedScale {
+    min-width: 10rem;
+    font-size: 0.95rem !important;
+    padding: 0.5rem;
+    margin-bottom: 20px !important;
+}
+
+text.updatemenu-item-text.user-select-none {
+    fill: rgba(254, 52, 110, 1) !important;
+}

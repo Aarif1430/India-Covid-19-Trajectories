@@ -1,0 +1,47 @@
+<div class="siderbar-panel">
+    <div class="logo">
+        <a href="https://www.creative-tim.com?ref=bda-sidebar-logo" class="simple-text logo-mini">
+            <div class="logo-img">
+                <img src="./assets/img/covid.png" />
+            </div>
+        </a>
+        <a href="https://www.creative-tim.com?ref=bda-sidebar-logo" class="simple-text logo-normal">
+    Covid India@2020
+  </a>
+    </div>
+    <div class="form-group col-lg-12 mb-2">
+        <label for="selectedScale" style="font-size: 18px; color: black">Select Parameter</label>
+        <select id="selectedScale">
+      <option >
+        Confirmed Cases
+      </option>
+      <option >
+        Reported Deaths
+      </option>
+    </select>
+        <label for="selectedScale" style="font-size: 18px; color: black">Select Scale</label>
+        <select id="selectedScale">
+        <option >
+          Logarithimic
+        </option>
+        <option >
+          Linear
+        </option>
+      </select>
+        <label for="selectedScale" style="font-size: 20px; color:black">Indian States</label>
+        <input class="form-control" type="text" placeholder="Search For A Location" style="background-color: white; color: black" [(ngModel)]="searchText" autocomplete="off">
+        <div class="buttonswrapper">
+            <button (click)="onDeSelectAll($event)" aria-Label="Deselect All Regions" style="margin-right: 5px;">Deselect All</button>
+            <button (click)="onSelectAll($event)" [(ngModel)]="visibleStates" aria-Label="Select All Regions" ngDefaultControl>Select All</button>
+        </div>
+    </div>
+    <ul class="states">
+        <div *ngFor="let state of visibleStates | filter:searchText">
+            <label class="checkbox">
+            <input type="checkbox" name="options" value="{{state.name}}"  (change)="onItemSelect($event)" [checked]="state.checked"> 
+              {{state.name}}
+            </label>
+        </div>
+
+    </ul>
+</div>
